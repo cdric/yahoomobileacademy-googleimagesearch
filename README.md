@@ -23,7 +23,8 @@ Additional work done
 
 Key learnings
 -------------
- - RelativeLayout take sometime to handle :-)
+ - Learn how to use RelativeLayout to build more complex Activity pages
+ - Learn how to load default value of a Spinner through XML Resources
  - Learn how to style the text within a Spinner view.
 
 Open questions
