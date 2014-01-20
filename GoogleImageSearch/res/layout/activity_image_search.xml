@@ -24,6 +24,7 @@
         android:layout_alignBottom="@+id/etSearchQuery"
         android:layout_alignParentRight="true"
         android:onClick="onImageSearch"
+        android:enabled="false"
         android:text="@string/btSearcu" />
 
     <GridView

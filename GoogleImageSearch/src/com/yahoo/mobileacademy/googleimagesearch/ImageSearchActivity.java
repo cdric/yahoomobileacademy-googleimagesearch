@@ -9,6 +9,8 @@ import org.json.JSONObject;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -19,7 +21,6 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.GridView;
-import android.widget.Toast;
 
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.JsonHttpResponseHandler;
@@ -83,6 +84,20 @@ public class ImageSearchActivity extends Activity {
 			}
 			
 		});
+		
+		// Register textChangesListener on the search query EditText View
+		etSearchQuery.addTextChangedListener(new TextWatcher(){
+	        public void afterTextChanged(Editable s) {
+	        	
+	        	// Activate the search button only for queries
+	        	// that can potentially return results
+	        	btSearch.setEnabled(
+	        			etSearchQuery.getText() != null
+	        			&& !etSearchQuery.getText().toString().isEmpty());
+	        }
+	        public void beforeTextChanged(CharSequence s, int start, int count, int after){}
+	        public void onTextChanged(CharSequence s, int start, int before, int count){}
+	    }); 
 		
 	}
 	
