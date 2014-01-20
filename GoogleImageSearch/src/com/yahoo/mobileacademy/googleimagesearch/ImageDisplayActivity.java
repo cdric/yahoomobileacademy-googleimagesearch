@@ -6,6 +6,12 @@ import android.os.Bundle;
 import com.loopj.android.image.SmartImageView;
 import com.yahoo.mobileacademy.googleimagesearch.beans.ImageResult;
 
+/**
+ * Activity that displays a full screen image
+ * 
+ * @author CŽdric Lignier <cedric.lignier@free.fr>
+ *
+ */
 public class ImageDisplayActivity extends Activity {
 
 	@Override

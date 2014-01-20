@@ -11,6 +11,14 @@ import android.widget.Spinner;
 import com.yahoo.mobileacademy.googleimagesearch.beans.SearchFilters;
 import com.yahoo.mobileacademy.googleimagesearch.helpers.UtilityClass;
 
+/**
+ * Advanced Search Filter Activity
+ * Provide various filters for the user to improve
+ * the relevance of the search results
+ * 
+ * @author CŽdric Lignier <cedric.lignier@free.fr>
+ *
+ */
 public class SearchOptionsActivity extends Activity {
 
 	private SearchFilters searchFilters = new SearchFilters();
@@ -24,7 +32,6 @@ public class SearchOptionsActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_search_options);
-		
 		setUpViews();
 		loadSearchFilters();
 	}
@@ -33,12 +40,10 @@ public class SearchOptionsActivity extends Activity {
 	 * Setup the views for this activity
 	 */
 	private void setUpViews() {
-		
 		spImageSize = initSpinner(R.id.spImageSize, R.array.image_size_values);
 		spColorFilter = initSpinner(R.id.spColorFilter, R.array.color_filter_values);
 		spImageType = initSpinner(R.id.spImageType, R.array.image_type_values);
 		etSiteFilter = (EditText) findViewById(R.id.etSiteFilter);
-		
 	}
 	
 	/**
@@ -48,7 +53,6 @@ public class SearchOptionsActivity extends Activity {
 	 * @return Returns the Spinner object
 	 */
 	private Spinner initSpinner(int spinnerId, int spinnerValues) {
-		
 		Spinner spinner = (Spinner) findViewById(spinnerId);
 		
 		// Update the layout of the spinner to align text to the right
@@ -59,7 +63,6 @@ public class SearchOptionsActivity extends Activity {
 	    spinner.setAdapter(adapter);
 	    
 	    return spinner;
-		
 	}
 	
 	/**
@@ -67,13 +70,10 @@ public class SearchOptionsActivity extends Activity {
 	 * @param v
 	 */
 	public void onClickSave(View v) {
-		
 		Intent i = new Intent(getApplicationContext(), ImageSearchActivity.class);
 		updateSearchFilters();
-		
 		i.putExtra("searchFilters", searchFilters);
 		startActivity(i);
-		
 	}
 
 	/**
@@ -92,15 +92,19 @@ public class SearchOptionsActivity extends Activity {
 	private void loadSearchFilters() {
 		searchFilters = (SearchFilters) getIntent().getSerializableExtra("searchFilters");
 		if (searchFilters != null) {
+			// Color Filter
 			if (searchFilters.getColorFilter() != null) {
 				spColorFilter.setSelection(UtilityClass.findValuePositionInArray(searchFilters.getColorFilter(), getResources().getStringArray(R.array.color_filter_values)));
 			}
+			// Image Size Filter
 			if (searchFilters.getImageSize() != null) {
 				spImageSize.setSelection(UtilityClass.findValuePositionInArray(searchFilters.getImageSize(), getResources().getStringArray(R.array.image_size_values)));
 			}
+			// Image Type Filter
 			if (searchFilters.getImageType() != null) {
 				spImageType.setSelection(UtilityClass.findValuePositionInArray(searchFilters.getImageType(), getResources().getStringArray(R.array.image_type_values)));
 			}
+			// Site Filter
 			if (searchFilters.getSiteFilter() != null) {
 				etSiteFilter.setText(searchFilters.getSiteFilter());
 			}

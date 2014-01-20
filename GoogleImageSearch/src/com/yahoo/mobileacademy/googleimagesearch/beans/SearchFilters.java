@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 /**
  * Bean that represents the set of search filters
- * the user can select
+ * the user can use when performing a search
  * 
  * @author CŽdric Lignier <cedric.lignier@free.fr>
  *
@@ -22,19 +22,6 @@ public class SearchFilters implements Serializable {
 	 * Default constructor
 	 */
 	public SearchFilters() { }
-	
-	/**
-	 * Alternative constructor
-	 */
-	public SearchFilters(String imageSize, 
-			String colorFilter, 
-			String imageType, 
-			String siteFilter) {
-		this.imageSize = imageSize;
-		this.colorFilter = colorFilter;
-		this.imageType = imageType;
-		this.siteFilter = siteFilter;
-	}
 
 	public String getImageSize() {
 		return imageSize;

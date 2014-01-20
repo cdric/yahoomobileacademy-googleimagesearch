@@ -8,7 +8,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 /**
- * Bean that represent an Image result
+ * Bean that represents an Image result
  * @author CŽdric Lignier <cedric.lignier@free.fr>
  *
  */

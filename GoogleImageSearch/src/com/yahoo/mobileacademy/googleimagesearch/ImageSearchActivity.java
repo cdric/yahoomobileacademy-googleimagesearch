@@ -28,6 +28,13 @@ import com.yahoo.mobileacademy.googleimagesearch.beans.ImageResult;
 import com.yahoo.mobileacademy.googleimagesearch.beans.SearchFilters;
 import com.yahoo.mobileacademy.googleimagesearch.helpers.UtilityClass;
 
+/**
+ * Main application Activity
+ * Provides user with a search bar and display results
+ * 
+ * @author CŽdric Lignier <cedric.lignier@free.fr>
+ *
+ */
 public class ImageSearchActivity extends Activity {
 
 	EditText etSearchQuery;
@@ -55,9 +62,6 @@ public class ImageSearchActivity extends Activity {
 		if (searchFilters == null) {
 			searchFilters = new SearchFilters();
 		}
-//		else {
-//			Toast.makeText(this, searchFilter.toString(), Toast.LENGTH_SHORT).show();
-//		}
 		
 		// Initialize image adapter
 		imageAdapter = new ImageResultArrayAdapter(this, imageResults);
@@ -81,6 +85,20 @@ public class ImageSearchActivity extends Activity {
 		});
 		
 	}
+	
+	/**
+	 * Initialize object references for the View
+	 */
+	private void setUpViews() {
+		etSearchQuery = (EditText) findViewById(R.id.etSearchQuery);
+		btSearch = (Button) findViewById(R.id.btnSearch);
+		gvResults = (GridView) findViewById(R.id.gvResults);
+		btLoadMore = (Button) findViewById(R.id.btLoadMore);
+	}
+	
+	// -------------------------
+	// GRID VIEW RELATED METHODS
+	// -------------------------
 
 	/**
 	 * Method invoked to perform an image search
@@ -114,7 +132,6 @@ public class ImageSearchActivity extends Activity {
 							imageJsonResults = response.getJSONObject("responseData").getJSONArray("results");
 							imageResults.clear();
 							imageAdapter.addAll(ImageResult.fromJSONArray(imageJsonResults));
-							//imageAdapter.notify();
 							Log.d("DEBUG", imageResults.toString());
 							
 							// GoogleImage API only allow 8 pages to be return
@@ -139,18 +156,6 @@ public class ImageSearchActivity extends Activity {
 					}
 					
 				});
-	}
-
-	/**
-	 * Initialize object reference from the View
-	 */
-	private void setUpViews() {
-		etSearchQuery = (EditText) findViewById(R.id.etSearchQuery);
-		btSearch = (Button) findViewById(R.id.btnSearch);
-		gvResults = (GridView) findViewById(R.id.gvResults);
-		
-		btLoadMore = (Button) findViewById(R.id.btLoadMore);
-		
 	}
 	
 	// --------------------------
