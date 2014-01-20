@@ -1,7 +1,7 @@
-yahoomobileacademy-googleimagesearch
-====================================
+Google Image Searcher
+=====================
 
-Yahoo, Introduction to Android - Assignment Week 2: Google Image Searcher
+*Yahoo, Introduction to Android - Assignment Week 2: Google Image Searcher*
 
 This project support the following user stories
  - User can enter a search query that will display a grid of images from Google Images.
