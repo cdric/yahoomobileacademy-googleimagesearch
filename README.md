@@ -3,7 +3,8 @@ Google Image Searcher
 
 *Yahoo, Introduction to Android - Assignment Week 2: Google Image Searcher*
 
-This project support the following user stories
+User stories implemented
+------------------------
  - User can enter a search query that will display a grid of images from Google Images.
  - User can modify advanced search options such as:
     - Size (small, medium, large, extra-large)
@@ -13,6 +14,7 @@ This project support the following user stories
  - User can load more image using a "Load more image" button located in the footer of the GridView
 
 Additional work done
+--------------------
  - User settings are persisted through the life of the application so the user doesnt have to re-enter the filter he/she previously selected when returning on the Activity
  - The "Load more image" button automatically disable itself when no more results are available
  - The text within the spinner is align to the right of the view
@@ -20,14 +22,17 @@ Additional work done
 - Write unit tests to validate utility methods
 
 Key learnings
- - RelativeLayout take sometime to handle :-)
+-------------
+ - Learn how to use RelativeLayout to build more complex Activity pages
+ - Learn how to load default value of a Spinner through XML Resources
  - Learn how to style the text within a Spinner view.
- 
+
 Open questions
+--------------
  - Why do I have to override the toString() method of the ImageResult class in order for my debug statements to display each property of the bean rather than only displaying the reference to the object?
  - I have a classpath issue with my test method <code>UtilityClassTest.testBuildGoogleImageSearchQuery</code> that I was not able to resolve. 
  
-<block>
+<pre>
 java.lang.NoClassDefFoundError: android/net/Uri
 	at com.yahoo.mobileacademy.googleimagesearch.helpers.UtilityClass.buildGoogleImageSearchQuery(UtilityClass.java:50)
 	at com.yahoo.mobileacademy.googleimagesearch.helpers.UtilityClassTest.testBuildGoogleImageSearchQuery(UtilityClassTest.java:48)
@@ -57,5 +62,5 @@ Caused by: java.lang.ClassNotFoundException: android.net.Uri
 	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:301)
 	at java.lang.ClassLoader.loadClass(ClassLoader.java:247)
 	... 20 more
-</block>
+</pre>
 
