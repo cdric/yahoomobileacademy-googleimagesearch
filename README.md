@@ -13,18 +13,21 @@ User stories implemented
     - Site (yahoo.com)
  - User can load more image using a "Load more image" button located in the footer of the GridView
 
-# Additional work done
+Additional work done
+--------------------
  - User settings are persisted through the life of the application so the user doesnt have to re-enter the filter he/she previously selected when returning on the Activity
  - The "Load more image" button automatically disable itself when no more results are available
  - The text within the spinner is align to the right of the view
  - Created a SearchFilters bean to easily manage and pass search filters between activities
 - Write unit tests to validate utility methods
 
-# Key learnings
+Key learnings
+-------------
  - RelativeLayout take sometime to handle :-)
  - Learn how to style the text within a Spinner view.
 
- Open questions
+Open questions
+--------------
  - Why do I have to override the toString() method of the ImageResult class in order for my debug statements to display each property of the bean rather than only displaying the reference to the object?
  - I have a classpath issue with my test method <code>UtilityClassTest.testBuildGoogleImageSearchQuery</code> that I was not able to resolve. 
  
