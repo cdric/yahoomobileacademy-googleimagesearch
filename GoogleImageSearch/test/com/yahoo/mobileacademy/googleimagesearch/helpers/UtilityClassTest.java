@@ -11,6 +11,20 @@ import com.yahoo.mobileacademy.googleimagesearch.beans.SearchFilters;
  */
 public class UtilityClassTest extends TestCase {
 
+	public void testFindValuePositionInArray() {
+		
+		String[] str = {"blue", "yellow", "black"};
+		String[] strEmpty = {};
+		
+		assertSame("Looking up for an existing value", 0, UtilityClass.findValuePositionInArray("blue", str));
+		assertSame("Looking up for an existing value", 1, UtilityClass.findValuePositionInArray("yellow", str));
+		assertSame("Looking up for an existing value", 2, UtilityClass.findValuePositionInArray("black", str));
+		assertSame("Looking up for a non existing value", -1, UtilityClass.findValuePositionInArray("white", str));
+		assertSame("Looking up an empty array", -1, UtilityClass.findValuePositionInArray("blue", null));
+		assertSame("Looking up an empty array", -1, UtilityClass.findValuePositionInArray("blue", strEmpty));
+
+	}
+	
 	public void testBuildGoogleImageSearchQuery() {
 		
 		SearchFilters sf = new SearchFilters();
@@ -34,5 +48,7 @@ public class UtilityClassTest extends TestCase {
 		assertSame("url with define search filters", expectedUrl, UtilityClass.buildGoogleImageSearchQuery(query, sf, 0));
 								
 	}
+	
+
 
 }

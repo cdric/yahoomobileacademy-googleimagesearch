@@ -59,8 +59,8 @@ public class UtilityClass {
 	}
 	
 	/**
-	 * Return the position of an element in an array
-	 * Return 0 if the element does not exist
+	 * Return the position of an element in an array (0...n)
+	 * Return -1 if the element does not exist
 	 * 
 	 * @param element the element to look for
 	 * @param array the array to parse
@@ -69,12 +69,14 @@ public class UtilityClass {
 	public static int findValuePositionInArray(String element,
 			String[] array) {
 		
+		if (array == null || array.length == 0) return -1;
+		
 		List<String> list = Arrays.asList(array);
 		
 		if (list.contains(element)) {
 			return list.indexOf(element);
 		} else {
-			return 0;
+			return -1;
 		}
 		
 	}
