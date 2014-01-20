@@ -19,7 +19,8 @@ Additional work done
  - The "Load more image" button automatically disable itself when no more results are available
  - The text within the spinner is align to the right of the view
  - Created a SearchFilters bean to easily manage and pass search filters between activities
-- Write unit tests to validate utility methods
+ - Disable search button when the query isn't valid
+ - Write unit tests to validate utility methods
 
 Key learnings
 -------------
