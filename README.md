@@ -25,9 +25,9 @@ Key learnings
  
 Open questions
  - Why do I have to override the toString() method of the ImageResult class in order for my debug statements to display each property of the bean rather than only displaying the reference to the object?
- - I have a classpath issue with of my test method that I was not able to resolve. 
+ - I have a classpath issue with my test method <code>UtilityClassTest.testBuildGoogleImageSearchQuery</code> that I was not able to resolve. 
  
-<code>
+<block>
 java.lang.NoClassDefFoundError: android/net/Uri
 	at com.yahoo.mobileacademy.googleimagesearch.helpers.UtilityClass.buildGoogleImageSearchQuery(UtilityClass.java:50)
 	at com.yahoo.mobileacademy.googleimagesearch.helpers.UtilityClassTest.testBuildGoogleImageSearchQuery(UtilityClassTest.java:48)
@@ -57,5 +57,5 @@ Caused by: java.lang.ClassNotFoundException: android.net.Uri
 	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:301)
 	at java.lang.ClassLoader.loadClass(ClassLoader.java:247)
 	... 20 more
-</code>
+</block>
 
