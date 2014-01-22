@@ -1,4 +1,4 @@
-package com.yahoo.mobileacademy.googleimagesearch;
+package com.yahoo.mobileacademy.googleimagesearch.activities;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -8,8 +8,12 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 
-import com.yahoo.mobileacademy.googleimagesearch.beans.SearchFilters;
+import com.yahoo.mobileacademy.googleimagesearch.R;
+import com.yahoo.mobileacademy.googleimagesearch.R.array;
+import com.yahoo.mobileacademy.googleimagesearch.R.id;
+import com.yahoo.mobileacademy.googleimagesearch.R.layout;
 import com.yahoo.mobileacademy.googleimagesearch.helpers.UtilityClass;
+import com.yahoo.mobileacademy.googleimagesearch.models.SearchFilters;
 
 /**
  * Advanced Search Filter Activity

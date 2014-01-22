@@ -1,4 +1,4 @@
-package com.yahoo.mobileacademy.googleimagesearch;
+package com.yahoo.mobileacademy.googleimagesearch.activities;
 
 import java.util.ArrayList;
 
@@ -24,10 +24,14 @@ import android.widget.GridView;
 
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.JsonHttpResponseHandler;
+import com.yahoo.mobileacademy.googleimagesearch.R;
+import com.yahoo.mobileacademy.googleimagesearch.R.id;
+import com.yahoo.mobileacademy.googleimagesearch.R.layout;
+import com.yahoo.mobileacademy.googleimagesearch.R.menu;
 import com.yahoo.mobileacademy.googleimagesearch.adapters.ImageResultArrayAdapter;
-import com.yahoo.mobileacademy.googleimagesearch.beans.ImageResult;
-import com.yahoo.mobileacademy.googleimagesearch.beans.SearchFilters;
 import com.yahoo.mobileacademy.googleimagesearch.helpers.UtilityClass;
+import com.yahoo.mobileacademy.googleimagesearch.models.ImageResult;
+import com.yahoo.mobileacademy.googleimagesearch.models.SearchFilters;
 
 /**
  * Main application Activity

@@ -2,7 +2,7 @@ package com.yahoo.mobileacademy.googleimagesearch.helpers;
 
 import junit.framework.TestCase;
 
-import com.yahoo.mobileacademy.googleimagesearch.beans.SearchFilters;
+import com.yahoo.mobileacademy.googleimagesearch.models.SearchFilters;
 
 /**
  * Unit tests for the public methods of the UtilityClass

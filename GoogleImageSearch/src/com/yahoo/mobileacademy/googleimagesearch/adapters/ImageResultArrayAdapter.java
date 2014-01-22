@@ -10,7 +10,7 @@ import android.widget.ArrayAdapter;
 
 import com.loopj.android.image.SmartImageView;
 import com.yahoo.mobileacademy.googleimagesearch.R;
-import com.yahoo.mobileacademy.googleimagesearch.beans.ImageResult;
+import com.yahoo.mobileacademy.googleimagesearch.models.ImageResult;
 
 public class ImageResultArrayAdapter extends ArrayAdapter<ImageResult> {
 

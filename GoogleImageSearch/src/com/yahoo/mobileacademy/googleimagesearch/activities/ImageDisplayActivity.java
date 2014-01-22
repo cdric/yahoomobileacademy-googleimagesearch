@@ -1,10 +1,13 @@
-package com.yahoo.mobileacademy.googleimagesearch;
+package com.yahoo.mobileacademy.googleimagesearch.activities;
 
 import android.app.Activity;
 import android.os.Bundle;
 
 import com.loopj.android.image.SmartImageView;
-import com.yahoo.mobileacademy.googleimagesearch.beans.ImageResult;
+import com.yahoo.mobileacademy.googleimagesearch.R;
+import com.yahoo.mobileacademy.googleimagesearch.R.id;
+import com.yahoo.mobileacademy.googleimagesearch.R.layout;
+import com.yahoo.mobileacademy.googleimagesearch.models.ImageResult;
 
 /**
  * Activity that displays a full screen image

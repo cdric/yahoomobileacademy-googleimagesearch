@@ -5,7 +5,7 @@ import java.util.List;
 
 import android.net.Uri;
 
-import com.yahoo.mobileacademy.googleimagesearch.beans.SearchFilters;
+import com.yahoo.mobileacademy.googleimagesearch.models.SearchFilters;
 
 /**
  * Generic utility class that contain static

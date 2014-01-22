@@ -1,4 +1,4 @@
-package com.yahoo.mobileacademy.googleimagesearch.beans;
+package com.yahoo.mobileacademy.googleimagesearch.models;
 
 import java.io.Serializable;
 import java.util.ArrayList;
