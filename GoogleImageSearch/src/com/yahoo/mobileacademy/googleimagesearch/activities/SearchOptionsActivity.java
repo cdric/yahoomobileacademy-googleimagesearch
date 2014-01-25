@@ -74,10 +74,11 @@ public class SearchOptionsActivity extends Activity {
 	 * @param v
 	 */
 	public void onClickSave(View v) {
-		Intent i = new Intent(getApplicationContext(), ImageSearchActivity.class);
+		Intent i = new Intent();
 		updateSearchFilters();
 		i.putExtra("searchFilters", searchFilters);
-		startActivity(i);
+		setResult(RESULT_OK, i);
+		finish();
 	}
 
 	/**

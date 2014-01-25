@@ -39,6 +39,9 @@ import com.yahoo.mobileacademy.googleimagesearch.models.SearchFilters;
  */
 public class ImageSearchActivity extends Activity {
 
+	//TODO: Can be exported as constant
+	private static final int REQUEST_CODE = 20;
+	
 	EditText etSearchQuery;
 	Button btSearch, btLoadMore;
 	GridView gvResults;
@@ -60,7 +63,6 @@ public class ImageSearchActivity extends Activity {
 		setUpViews();
 		
 		// Load search filters
-		searchFilters = (SearchFilters) getIntent().getSerializableExtra("searchFilters");
 		if (searchFilters == null) {
 			searchFilters = new SearchFilters();
 		}
@@ -195,8 +197,20 @@ public class ImageSearchActivity extends Activity {
     	
     	Intent i = new Intent(getApplicationContext(), SearchOptionsActivity.class);
     	i.putExtra("searchFilters", searchFilters);
-    	startActivity(i);
+    	startActivityForResult(i, REQUEST_CODE);
     	
+    }
+    
+    // ------------------------
+    // ACTIVITY RELATED METHODS
+    // ------------------------
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+      if (resultCode == RESULT_OK && requestCode == REQUEST_CODE) {
+    	  searchFilters = (SearchFilters) data.getSerializableExtra("searchFilters");
+      }
+      
     }
 
 }
